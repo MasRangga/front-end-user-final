@@ -297,7 +297,7 @@ function DetailDokter() {
               <div className="card-body">
                 <h2 className="text-2xl font-bold ml-20">Paket MCU Dasar</h2>
                 <p className="text-sm ml-20 font-semibold">
-                  Pemeriksaan kolestrol & Jantung
+                  Pemeriksaan Psikiater & Kesehatan
                 </p>
               </div>
 
@@ -311,7 +311,7 @@ function DetailDokter() {
                     setSelectedPackage(e.target.value);
                   }}
                 />
-                <p className="ml-2 mt-20 text-lg font-bold">200K</p>
+                <p className="ml-2 mt-20 text-lg font-bold">300K</p>
               </div>
             </div>
 
@@ -339,7 +339,7 @@ function DetailDokter() {
                     setSelectedPackage(e.target.value);
                   }}
                 />
-                <p className="ml-2 mt-20 text-lg font-bold">400K</p>
+                <p className="ml-2 mt-20 text-lg font-bold">500K</p>
               </div>
             </div>
             <div className="card px-10">
