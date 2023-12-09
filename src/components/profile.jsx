@@ -29,21 +29,29 @@ function Profile() {
 
   return (
     <>
-      <div className="navbar max-w-6xl py-5">
-        <div className="flex-none" onClick={() => navigate("/")}>
-          <a className="btn btn-ghost normal-case text-xl shadow-xl">
-            <img src={left} alt="" />
-          </a>
-        </div>
-        <div className="flex-1 justify-center">
-          <a className="btn btn-ghost normal-case text-2xl">My Profile</a>
+      <div
+        className="absolute lg:py-3 py-3 lg:px-20"
+        onClick={() => navigate("/")}
+      >
+        <a className="btn btn-ghost normal-case text-xl shadow-xl">
+          <img src={left} alt="" />
+        </a>
+      </div>
+      <div className="flex flex-row justify-center py-5 text-center">
+        <div className="">
+          <a className="font-bold normal-case text-2xl">My Profile</a>
         </div>
       </div>
+
       <div className="lg:px-20 px-10 py-5">
         <div className="py-3 flex justify-center items-center"></div>
         <div className="card card-side bg-gradient-to-r from-emerald-500 to-blue-500 shadow-xl transform hover:scale-105 transition-transform duration-300 mt-4">
           <div className="card-body text-center text-white">
-            <img src={user.image ? user.image : person} alt="" className="w-20 lg:w-40 mx-auto mb-4 rounded-full" />
+            <img
+              src={user.image ? user.image : person}
+              alt=""
+              className="w-20 lg:w-40 mx-auto mb-4 rounded-full"
+            />
             <h2 className="text-xl font-extrabold mb-2">{user.name}</h2>
             <p className="mt-1 text-md opacity-80">{user.email}</p>
           </div>
@@ -80,19 +88,25 @@ function Profile() {
           <div className="py-10 flex justify-center">
             <img src={logout} alt="Logout" className="icon" />{" "}
           </div>
-          <h3 className="py-1 font-bold text-lg flex justify-center">Peringatan Logout!</h3>
-          <p className="py-2 flex justify-center">Apakah Anda yakin ingin keluar?</p>
+          <h3 className="py-1 font-bold text-lg flex justify-center">
+            Peringatan Logout!
+          </h3>
+          <p className="py-2 flex justify-center">
+            Apakah Anda yakin ingin keluar?
+          </p>
           <div className="modal-action flex flex-col items-center justify-center">
             <a
               onClick={handleLogoutButton}
               href="#"
-              className="w-full md:w-64 px-6 py-3 mb-4 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white transition duration-300 ease-in-out transform hover:scale-105 text-center shadow-md">
+              className="w-full md:w-64 px-6 py-3 mb-4 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white transition duration-300 ease-in-out transform hover:scale-105 text-center shadow-md"
+            >
               Logout
             </a>
 
             <a
               href="#"
-              className="w-full md:w-64 px-6 py-3 mb-4 rounded-full bg-white hover:bg-gray-300 text-emerald-500 transition duration-300 ease-in-out transform hover:scale-105 text-center border-2 border-gray-300">
+              className="w-full md:w-64 px-6 py-3 mb-4 rounded-full bg-white hover:bg-gray-300 text-emerald-500 transition duration-300 ease-in-out transform hover:scale-105 text-center border-2 border-gray-300"
+            >
               Cancel
             </a>
           </div>

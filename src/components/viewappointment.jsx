@@ -21,14 +21,17 @@ function ViewAppointment() {
 
   return (
     <>
-      <div className="navbar max-w-6xl lg:px-20 px-15 py-10 flex flex-row">
-        <div className="flex-none" onClick={() => navigate(-1)}>
-          <a className="btn btn-ghost normal-case text-xl shadow-xl">
-            <img src={left} alt="" />
-          </a>
-        </div>
-        <div className="flex-1 justify-center">
-          <a className="btn btn-ghost normal-case text-2xl">Appointment</a>
+      <div
+        className="absolute lg:py-3 py-3 lg:px-20"
+        onClick={() => navigate(-1)}
+      >
+        <a className="btn btn-ghost normal-case text-xl shadow-xl">
+          <img src={left} alt="" />
+        </a>
+      </div>
+      <div className="flex flex-row justify-center py-5 text-center">
+        <div className="">
+          <a className="font-bold normal-case text-2xl">Appointment</a>
         </div>
       </div>
 
@@ -77,17 +80,17 @@ function ViewAppointment() {
                 <div className="card-body shadow-xl rounded-xl w-100 max-[832px]:w-screen">
                   <div className="my-auto flex items-center gap-60">
                     <p>Amount</p>
-                    <h5 className="card-title">$ {data.package.price}</h5>
+                    <h5 className="card-title">K {data.package.price}</h5>
                   </div>
                   <div className="my-auto flex items-center gap-60 max-[832px]:justify-between">
                     <p>Duration (30 mins)</p>
-                    <h5 className="card-title">1 x $ {data.package.price}</h5>
+                    <h5 className="card-title">1 x K {data.package.price}</h5>
                   </div>
                   <br />
                   <hr />
                   <div className="my-auto flex items-center gap-60">
                     <p>Total</p>
-                    <h5 className="card-title">$ {1 * data.package.price}</h5>
+                    <h5 className="card-title">K {1 * data.package.price}</h5>
                   </div>
                 </div>
               </div>

@@ -79,18 +79,20 @@ function DetailDokter() {
     <>
       {data && data.specialist && (
         <>
-          <div className="navbar max-w-6xl lg:px-20 px-15 py-10 flex flex-row">
-            <div className="flex-none" onClick={() => navigate("/doctors")}>
-              <a className="btn btn-ghost normal-case text-xl shadow-xl">
-                <img src={left} alt="" />
-              </a>
-            </div>
-            <div className="flex-1 justify-center">
-              <button className="btn btn-ghost normal-case text-2xl">
-                Reservasi
-              </button>
+          <div
+            className="absolute lg:py-3 py-3 lg:px-20"
+            onClick={() => navigate("/doctors")}
+          >
+            <a className="btn btn-ghost normal-case text-xl shadow-xl">
+              <img src={left} alt="" />
+            </a>
+          </div>
+          <div className="flex flex-row justify-center py-5 text-center">
+            <div className="">
+              <a className="font-bold normal-case text-2xl">Reservasi</a>
             </div>
           </div>
+
           <form onSubmit={handleSubmit}>
             <div className="alert alert-warning fixed top-0 z-[1] hidden">
               <svg
@@ -172,11 +174,11 @@ function DetailDokter() {
                     </span>
                   </div>
                 </div>
-                <div className="menu menu-horizontal bg-base-200 w-80 justify-around rounded-2xl">
+                <div class="flex flex-wrap justify-between bg-base-200 w-80 rounded-2xl p-4">
                   {[...Array(29).keys()].map((day) => (
                     <input
                       key={day + 1}
-                      className="join-item btn"
+                      class="join-item btn mb-2"
                       type="radio"
                       name="date"
                       value={`2023-12-${day + 1}`}
@@ -187,6 +189,7 @@ function DetailDokter() {
                     />
                   ))}
                 </div>
+
                 <div className="navbar">
                   <div className="flex-none py-3 px-2.5">
                     <img src={time} alt="" />

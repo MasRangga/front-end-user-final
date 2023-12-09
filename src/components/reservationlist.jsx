@@ -31,14 +31,17 @@ function ReservationList() {
 
   return (
     <>
-      <div className="max-w-6xl lg:px-20 px-15 py-10 flex flex-row justify-center">
-        <div className="flex-none" onClick={() => navigate("/profile")}>
-          <a className="btn btn-ghost normal-case text-xl shadow-xl">
-            <img src={left} alt="" />
-          </a>
-        </div>
-        <div className="flex-1 justify-center">
-          <a className="btn btn-ghost normal-case text-2xl">Reservation List</a>
+      <div
+        className="absolute lg:py-3 py-3 lg:px-20"
+        onClick={() => navigate("/profile")}
+      >
+        <a className="btn btn-ghost normal-case text-xl shadow-xl">
+          <img src={left} alt="" />
+        </a>
+      </div>
+      <div className="flex flex-row justify-center py-5 text-center">
+        <div className="">
+          <a className="font-bold normal-case text-2xl">Reservation List</a>
         </div>
       </div>
 

@@ -17,14 +17,17 @@ function DetailArtikel() {
 
   return (
     <>
-      <div className="navbar max-w-6xl lg:px-20 px-15 py-10 flex flex-row">
-        <div className="flex-none" onClick={() => navigate(-1)}>
-          <a className="btn btn-ghost normal-case text-xl shadow-xl">
-            <img src={left} alt="" />
-          </a>
-        </div>
-        <div className="flex-1 justify-center">
-          <button className="btn btn-ghost normal-case text-2xl">Artikel</button>
+      <div
+        className="absolute lg:py-3 py-3 lg:px-20"
+        onClick={() => navigate("/doctors")}
+      >
+        <a className="btn btn-ghost normal-case text-xl shadow-xl">
+          <img src={left} alt="" />
+        </a>
+      </div>
+      <div className="flex flex-row justify-center py-5 text-center">
+        <div className="">
+          <a className="font-bold normal-case text-2xl">Artikel</a>
         </div>
       </div>
       {article && (
@@ -32,7 +35,11 @@ function DetailArtikel() {
           <div className="lg:px-20 px-15 py-10">
             <div className="card w-ful bg-base-100 shadow-xl">
               <figure className="">
-                <img src={article.image} alt="gambar artikel" className="w-80" />
+                <img
+                  src={article.image}
+                  alt="gambar artikel"
+                  className="w-80"
+                />
               </figure>
               <div className="card-body">
                 <p className="font-bold">{article.title}</p>
