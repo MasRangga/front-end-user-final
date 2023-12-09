@@ -168,41 +168,24 @@ function DetailDokter() {
                   </div>
                   <div className="flex-none">
                     <span className="badge border-none font-semibold">
-                      October
+                      Desember
                     </span>
                   </div>
                 </div>
                 <div className="menu menu-horizontal bg-base-200 w-80 justify-around rounded-2xl">
-                  <input
-                    className="join-item btn"
-                    type="radio"
-                    name="date"
-                    value="2023-12-21"
-                    aria-label="21"
-                    onChange={(e) => {
-                      setSelectedDate(e.target.value);
-                    }}
-                  />
-                  <input
-                    className="join-item btn"
-                    type="radio"
-                    name="date"
-                    value="2023-12-22"
-                    aria-label="22"
-                    onChange={(e) => {
-                      setSelectedDate(e.target.value);
-                    }}
-                  />
-                  <input
-                    className="join-item btn"
-                    type="radio"
-                    name="date"
-                    value="2023-12-23"
-                    aria-label="23"
-                    onChange={(e) => {
-                      setSelectedDate(e.target.value);
-                    }}
-                  />
+                  {[...Array(29).keys()].map((day) => (
+                    <input
+                      key={day + 1}
+                      className="join-item btn"
+                      type="radio"
+                      name="date"
+                      value={`2023-12-${day + 1}`}
+                      aria-label={`${day + 1}`}
+                      onChange={(e) => {
+                        setSelectedDate(e.target.value);
+                      }}
+                    />
+                  ))}
                 </div>
                 <div className="navbar">
                   <div className="flex-none py-3 px-2.5">
@@ -249,8 +232,28 @@ function DetailDokter() {
                     className="join-item btn"
                     type="radio"
                     name="time"
-                    value="18:00"
-                    aria-label="18:00"
+                    value="19:00"
+                    aria-label="19:00"
+                    onChange={(e) => {
+                      setSelectedTime(e.target.value);
+                    }}
+                  />
+                  <input
+                    className="join-item btn"
+                    type="radio"
+                    name="time"
+                    value="20:00"
+                    aria-label="20:00"
+                    onChange={(e) => {
+                      setSelectedTime(e.target.value);
+                    }}
+                  />
+                  <input
+                    className="join-item btn"
+                    type="radio"
+                    name="time"
+                    value="21:00"
+                    aria-label="21:00"
                     onChange={(e) => {
                       setSelectedTime(e.target.value);
                     }}
