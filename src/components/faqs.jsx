@@ -7,7 +7,7 @@ function Faqs() {
           className="text-4xl font-bold text-center"
           style={{ color: "#009781" }}
         >
-          FAQs
+          Frequently Asked Questions
         </h1>
       </div>
 
@@ -15,12 +15,12 @@ function Faqs() {
         <div className="collapse collapse-arrow join-item border border-base-300">
           <input type="radio" name="my-accordion-4" />
           <div className="collapse-title text-xl font-medium">
-            Apakah KlikHeula gratis?
+            Apakah KlinikEgo gratis?
           </div>
           <div className="collapse-content">
             <p>
               Kamu dapat dengan bebas mengakses seluruh informasi kesehatan yang
-              terdapat di KlinikHeula kapanpun dan dimanapun
+              terdapat di KlinikEgo kapanpun dan dimanapun
             </p>
           </div>
         </div>
@@ -31,9 +31,9 @@ function Faqs() {
           </div>
           <div className="collapse-content">
             <p>
-              Kamu dapat berkonsultasi dengan dokter kapan saja dan di mana
-              saja. KlikHeula menyediakan pelayanan medis jarak jauh dengan
-              dokter umum dan spesialis dengan harga terjangkau
+              Di Klinik Ego, kami memberikan fleksibilitas kepada Anda untuk
+              memilih paket pemeriksaan kesehatan yang sesuai dengan kebutuhan
+              dan preferensi Anda.
             </p>
           </div>
         </div>
@@ -45,9 +45,9 @@ function Faqs() {
           <div className="collapse-content">
             <p>
               Kamu dapat melakukannya dengan mudah, dengan cara : Buka Halaman
-              utama KlinikHeula, Pilih Rekomendasi dokter yang tersedia,
-              Tentukan tanggal dan jam konsultasi, Pilih metode konsultasi, dan
-              Pilih metode pembayaran
+              utama KlinikEgo, Pilih Rekomendasi dokter yang tersedia, Tentukan
+              tanggal dan jam konsultasi, Pilih metode konsultasi, dan Pilih
+              metode pembayaran.
             </p>
           </div>
         </div>
@@ -58,10 +58,10 @@ function Faqs() {
           </div>
           <div className="collapse-content">
             <p>
-              Pelayanan medis jarak jauh di KlinikHeula belum menyertakan
-              pemberian obat secara langsung. Dokter akan memberikan resep
-              digital sesuai dengan kondisi Anda yang dapat ditebus di apotek
-              terdekat
+              Tentu Setelah Anda berhasil melakukan konsultasi di Klinik Ego,
+              Anda tidak hanya menjamin pelayanan medis terbaik, tetapi juga
+              mendapatkan kemudahan mendapatkan resep dan obat yang Anda
+              butuhkan.
             </p>
           </div>
         </div>

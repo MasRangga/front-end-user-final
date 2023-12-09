@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo1.png";
 
 function Navbar() {
   const userName = localStorage.getItem("name");
@@ -12,12 +12,12 @@ function Navbar() {
       style={{ backgroundColor: "#f4feff", color: "#000" }}
     >
       <div className="flex flex-row items-center gap-3">
-        <img src={logo} alt="logo" className="h-10" />
+        <img src={logo} alt="logo" className="h-20" />
         <h1
           className="font-bold text-2xl font-sans"
           style={{ color: "#009781" }}
         >
-          Klinik Heula
+          Klinik Ego
         </h1>
       </div>
       <nav>

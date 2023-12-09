@@ -10,23 +10,9 @@ function Footer() {
       <div className="bg-gray-200">
         <div className="lg:flex flex-row justify-between lg:px-40 px-10 py-8">
           <div>
-            <h1 className="font-bold text-md lg:py-3 py-5 text-center">
-              Follow Us
+            <h1 className="font-bold text-2xl lg:py-3 py-5 text-center">
+              Klinik Ego
             </h1>
-            <div className="flex flex-row gap-2 justify-center">
-              <button className="btn rounded-full">
-                <img src={google} alt="" className="w-5" />
-              </button>
-              <button className="btn rounded-full">
-                <img src={twitter} alt="" className="w-5" />
-              </button>
-              <button className="btn rounded-full">
-                <img src={instagram} alt="" className="w-5" />
-              </button>
-              <button className="btn rounded-full">
-                <img src={linkedin} alt="" className="w-5" />
-              </button>
-            </div>
           </div>
           <div>
             <h1 className="font-bold text-md lg:py-3 py-5 text-center">
@@ -51,23 +37,18 @@ function Footer() {
             </h1>
             <a href="#">
               <p className="lg:py-2 text-center lg:text-left py-1">
-                Monday - Saturday
+                Senin - Jumat
               </p>
             </a>
             <a href="#">
               <p className="lg:py-2 text-center lg:text-left py-1">
-                +123 456 789
-              </p>
-            </a>
-            <a href="#">
-              <p className="lg:py-2 text-center lg:text-left py-1">
-                klinikheula@gmail.com
+                klinikego@gmail.com
               </p>
             </a>
           </div>
         </div>
         <div className="lg:px-40 px-10 py-10">
-          <p>© 2023. KlinikHeula</p>
+          <p>© 2023. KlinikEgo</p>
         </div>
       </div>
     </>

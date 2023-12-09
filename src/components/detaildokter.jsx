@@ -10,7 +10,10 @@ import media from "../assets/package.png";
 import messages from "../assets/pesan.svg";
 import video from "../assets/Video.svg";
 import { useDispatch, useSelector } from "react-redux";
-import { clearState, submitReservation } from "../redux/actions/reservasi-action";
+import {
+  clearState,
+  submitReservation,
+} from "../redux/actions/reservasi-action";
 import { getDoctorDetail } from "../redux/actions/doctor-action";
 import Footer from "./footer";
 
@@ -20,7 +23,9 @@ function DetailDokter() {
   const [selectedPackage, setSelectedPackage] = useState("");
   const [error, setError] = useState("");
   const { data } = useSelector((state) => state.doctors);
-  const { isAuthenticatedReservation } = useSelector((state) => state.reservasi);
+  const { isAuthenticatedReservation } = useSelector(
+    (state) => state.reservasi
+  );
   const { reservationId } = useSelector((state) => state.reservasi);
   const { errorMessage } = useSelector((state) => state.reservasi);
   const token = localStorage.getItem("token");
@@ -35,7 +40,15 @@ function DetailDokter() {
     } else if (!token) {
       navigate("/login");
     } else {
-      dispatch(submitReservation(data.id, selectedDate, selectedTime, selectedPackage, token));
+      dispatch(
+        submitReservation(
+          data.id,
+          selectedDate,
+          selectedTime,
+          selectedPackage,
+          token
+        )
+      );
     }
   };
 
@@ -55,7 +68,8 @@ function DetailDokter() {
   }, [errorMessage]);
 
   useEffect(() => {
-    if (isAuthenticatedReservation) navigate(`/reservations/${reservationId}/select-payment`);
+    if (isAuthenticatedReservation)
+      navigate(`/reservations/${reservationId}/select-payment`);
     dispatch(clearState());
   }, [isAuthenticatedReservation]);
 
@@ -72,12 +86,19 @@ function DetailDokter() {
               </a>
             </div>
             <div className="flex-1 justify-center">
-              <button className="btn btn-ghost normal-case text-2xl">Reservasi</button>
+              <button className="btn btn-ghost normal-case text-2xl">
+                Reservasi
+              </button>
             </div>
           </div>
           <form onSubmit={handleSubmit}>
             <div className="alert alert-warning fixed top-0 z-[1] hidden">
-              <svg xmlns="http://www.w3.org/2000/svg" clasme="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                clasme="stroke-current shrink-0 h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -92,7 +113,11 @@ function DetailDokter() {
               <div className="md:w-3/5 max-w-2/3 bg-base-100 shadow-md rounded-tl-2xl md:rounded-l-2xl">
                 <div className="card card-side">
                   <div className="flex items-center justify-center w-48">
-                    <img className="rounded-2xl w-40 h-30" src={data.image} alt="dokterimg" />
+                    <img
+                      className="rounded-2xl w-40 h-30"
+                      src={data.image}
+                      alt="dokterimg"
+                    />
                   </div>
                   <div className="card-body">
                     <h2 className="card-title">{data.name}</h2>
@@ -121,7 +146,9 @@ function DetailDokter() {
                     <h2 className="card-title text-slate-500">Biography</h2>
                     <p className="text-slate-500">
                       {data.name}
-                      is the top most {data.specialist.name} specialist in {data.hospital} at {data.city}. She is available for private consultation.
+                      is the top most {data.specialist.name} specialist in{" "}
+                      {data.hospital} at {data.city}. She is available for
+                      private consultation.
                     </p>
                   </div>
                 </div>
@@ -135,10 +162,14 @@ function DetailDokter() {
                     </div>
                   </div>
                   <div className="flex-1">
-                    <div className="normal-case text-xl py-2.5 px-4 font-medium">Date</div>
+                    <div className="normal-case text-xl py-2.5 px-4 font-medium">
+                      Date
+                    </div>
                   </div>
                   <div className="flex-none">
-                    <span className="badge border-none font-semibold">October</span>
+                    <span className="badge border-none font-semibold">
+                      October
+                    </span>
                   </div>
                 </div>
                 <div className="menu menu-horizontal bg-base-200 w-80 justify-around rounded-2xl">
@@ -178,7 +209,9 @@ function DetailDokter() {
                     <img src={time} alt="" />
                   </div>
                   <div className="flex-1">
-                    <div className="normal-case text-xl py-2.5 px-4 font-medium">Time</div>
+                    <div className="normal-case text-xl py-2.5 px-4 font-medium">
+                      Time
+                    </div>
                   </div>
                 </div>
                 <div className="menu menu-horizontal bg-base-200 w-80 justify-around grid grid-cols-3 rounded-2xl">
@@ -255,11 +288,17 @@ function DetailDokter() {
             </div>
 
             <div className="card card-side bg-base-100 shadow-xl my-8 max-w-6xl mx-auto w-full">
-              <img src={messages} alt="messages" className="w-20 absolute top-6 left-5" />
+              <img
+                src={messages}
+                alt="messages"
+                className="w-20 absolute top-6 left-5"
+              />
 
               <div className="card-body">
-                <h2 className="text-2xl font-bold ml-20">Messaging</h2>
-                <p className="text-sm ml-20 font-semibold">Chat messages with doctor</p>
+                <h2 className="text-2xl font-bold ml-20">Paket MCU Dasar</h2>
+                <p className="text-sm ml-20 font-semibold">
+                  Pemeriksaan kolestrol & Jantung
+                </p>
               </div>
 
               <div className="flex items-center mb-5 mr-5">
@@ -272,16 +311,22 @@ function DetailDokter() {
                     setSelectedPackage(e.target.value);
                   }}
                 />
-                <p className="ml-2 mt-20 text-lg font-bold">$40</p>
+                <p className="ml-2 mt-20 text-lg font-bold">200K</p>
               </div>
             </div>
 
             <div className="card card-side bg-base-100 shadow-xl my-8 max-w-6xl mx-auto w-full">
-              <img src={video} alt="video-call" className="w-20 absolute top-6 left-5" />
+              <img
+                src={video}
+                alt="video-call"
+                className="w-20 absolute top-6 left-5"
+              />
 
               <div className="card-body">
-                <h2 className="text-2xl font-bold ml-20">Video Call</h2>
-                <p className="text-sm ml-20 font-semibold">Video call with doctor</p>
+                <h2 className="text-2xl font-bold ml-20">Paket MCU lengkap</h2>
+                <p className="text-sm ml-20 font-semibold">
+                  Skrining Kesehatan & Tes Audiometri
+                </p>
               </div>
 
               <div className="flex items-center mb-5 mr-5">
@@ -294,7 +339,7 @@ function DetailDokter() {
                     setSelectedPackage(e.target.value);
                   }}
                 />
-                <p className="ml-2 mt-20 text-lg font-bold">$40</p>
+                <p className="ml-2 mt-20 text-lg font-bold">400K</p>
               </div>
             </div>
             <div className="card px-10">
@@ -302,7 +347,8 @@ function DetailDokter() {
                 {error && <p style={{ color: "red" }}>{error}</p>}
                 <button
                   type="submit"
-                  className="w-full md:w-64 px-6 py-3 mb-4 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white transition duration-300 ease-in-out transform hover:scale-105 text-center shadow-md">
+                  className="w-full md:w-64 px-6 py-3 mb-4 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white transition duration-300 ease-in-out transform hover:scale-105 text-center shadow-md"
+                >
                   Book Appointment
                 </button>
               </div>

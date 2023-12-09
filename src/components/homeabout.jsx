@@ -15,15 +15,16 @@ function HomeAbout() {
             >
               <h2 className="text-4xl py-3">
                 Klinik
-                <span className="font-bold">Heula</span>
+                <span className="font-bold">Ego</span>
               </h2>
             </div>
             <p className="text-xl text-center text-gray-400">
-              Klinik Heaula adalah pusat kesehatan berkualitas tinggi dengan tim
-              medis berpengalaman dan fasilitas modern. Kami berkomitmen untuk
-              memberikan perawatan yang ramah dan efisien kepada pasien kami.
-              Kami berkomitmen untuk memberikan perawatan yang ramah dan efisien
-              kepada pasien kami.
+              Klinik Ego adalah tempat di mana keahlian medis dan kenyamanan
+              pasien bertemu secara harmonis. Dengan tim medis yang
+              berpengalaman dan fasilitas modern, kami tidak hanya memberikan
+              perawatan kesehatan berkualitas tinggi, tetapi juga menciptakan
+              lingkungan ramah yang memprioritaskan kebutuhan dan kesejahteraan
+              setiap pasien.
             </p>
           </div>
         </div>
