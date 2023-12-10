@@ -1,6 +1,6 @@
 import React from "react";
 import reservasi from "../assets/reservasi-doc.svg";
-import review from "../assets/review-doc.svg";
+import dokterprof from "../assets/dokterprof.svg";
 import faq from "../assets/faqs-doc.svg";
 
 function HomeService() {
@@ -41,15 +41,15 @@ function HomeService() {
           >
             <div className="flex items-center justify-center">
               <figure className="w-32 h-40 mt-5">
-                <img src={review} alt="Service" />
+                <img src={dokterprof} alt="Service" />
               </figure>
             </div>
             <div className="card-body">
-              <h2 className="card-title text-white">Review Dokter</h2>
+              <h2 className="card-title text-white">Dokter Profesional</h2>
               <p className="text-white">
-                Diskusikan permasalahan kesehatan yang sedang Anda hadapi, dan
-                jangan ragu untuk menanyakan pengobatan yang tepat Kami siap
-                membantu.
+                Ditangani oleh dokter yang profesional dan handal, Anda dapat
+                yakin bahwa perawatan kesehatan Anda dikelola dengan penuh
+                keahlian dan dedikasi.
               </p>
             </div>
           </div>
