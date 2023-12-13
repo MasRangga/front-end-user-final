@@ -13,10 +13,16 @@ export const CLEAR_STATE = "CLEAR_STATE";
 
 export const submitReservation = (doctorId, date, time, packageId, token) => {
   return async (dispatch) => {
+    date = `${date.getFullYear()}-${
+      date.getMonth() + 1
+    }-${date.getDate()}`;
+    
     dispatch(submitReservationRequest());
 
     try {
+      
       const response = await axios.post(
+        
         "https://back-end-production-a31e.up.railway.app/api/reservations",
         {
           doctorId,
@@ -30,6 +36,10 @@ export const submitReservation = (doctorId, date, time, packageId, token) => {
           },
         }
       );
+      
+      
+
+     
 
       dispatch(submitReservationSuccess(response.data.reservationId));
     } catch (error) {

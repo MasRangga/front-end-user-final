@@ -10,15 +10,26 @@ import media from "../assets/package.png";
 import messages from "../assets/pesan.svg";
 import video from "../assets/Video.svg";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  clearState,
-  submitReservation,
+import { clearState,
+submitReservation,
 } from "../redux/actions/reservasi-action";
 import { getDoctorDetail } from "../redux/actions/doctor-action";
 import Footer from "./footer";
-
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import "react-time-picker/dist/TimePicker.css";
 function DetailDokter() {
   const [selectedDate, setSelectedDate] = useState("");
+
+   const handleDateChange = (date) => {
+     setSelectedDate(date);
+   };
+
+   const incrementDate = () => {
+     const newDate = new Date(selectedDate);
+     newDate.setDate(newDate.getDate() + 1);
+     setSelectedDate(newDate);
+   };
   const [selectedTime, setSelectedTime] = useState("");
   const [selectedPackage, setSelectedPackage] = useState("");
   const [error, setError] = useState("");
@@ -174,21 +185,41 @@ function DetailDokter() {
                     </span>
                   </div>
                 </div>
-                <div class="flex flex-wrap justify-between bg-base-200 w-80 rounded-2xl p-4">
-                  {[...Array(29).keys()].map((day) => (
-                    <input
-                      key={day + 1}
-                      class="join-item btn mb-2"
-                      type="radio"
-                      name="date"
-                      value={`2023-12-${day + 1}`}
-                      aria-label={`${day + 1}`}
-                      onChange={(e) => {
-                        setSelectedDate(e.target.value);
-                      }}
-                    />
-                  ))}
-                </div>
+                {/* <div className="flex flex-wrap justify-between bg-base-200 w-80 rounded-2xl p-4">
+                  {[...Array(29).keys()].map((day) => {
+                    const dateValue = new Date(`2023-12-${day + 1}`);
+                    const isDisabled = dateValue < currentDate;
+
+                    return (
+                      <input
+                        key={day + 1}
+                        className={`join-item btn mb-2 ${
+                          isDisabled ? "disabled" : ""
+                        }`}
+                        type="radio"
+                        name="date"
+                        value={`2023-12-${day + 1}`}
+                        aria-label={`${day + 1}`}
+                        onChange={(e) => {
+                          if (!isDisabled) {
+                            setSelectedDate(e.target.value);
+                          }
+                        }}
+                        disabled={isDisabled}
+                      />
+                    );
+                  })}
+                </div> */}
+
+                <DatePicker
+                  selected={selectedDate}
+                  onChange={handleDateChange}
+                  dateFormat="dd/MM/yyyy"
+                  placeholderText="Pilih tanggal"
+                  className="mb-2 w-full h-[50px] lg:h-[40px] rounded-[5px] border-[1px] border-stone-600 px-4 text-[12px] lg:text-[16px] xl:text-lg"
+                  minDate={new Date()}
+                  onClickOutside={incrementDate}
+                />
 
                 <div className="navbar">
                   <div className="flex-none py-3 px-2.5">

@@ -17,6 +17,10 @@ function ListDoctor() {
     dispatch(getDoctorList());
   }, []);
 
+  useEffect(() => {
+    console.log("Data Dokter:", data);
+  }, [data]);
+   
   return (
     <>
       {Array.isArray(data) && (
@@ -85,3 +89,5 @@ function ListDoctor() {
 }
 
 export default ListDoctor;
+
+
